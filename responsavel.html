@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro do Responsável do Veículo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="js/responsavel.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1>Cadastro do Responsável do Veículo</h1>
+           
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <div class="input-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="nome" id="name" placeholder="Digite o Nome">
+                
+            </div>
+           
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <div class="input-icon">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" name="telefone" id="telefone" placeholder="Digite o Telefone">
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <div class="input-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" name="endereco" id="endereco" placeholder="Digite o Endereço">
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <div class="input-icon">
+                    <i class="fas fa-map-pin"></i>
+                    <input type="text" name="cep" id="cep" placeholder="Digite o CEP">
+                </div>
+            </div>
+
+            <button type="submit" class="button" onclick="validarCep()" id="botao">
+                <i class="fas fa-user-plus"></i> Cadastrar
+            </button>
+           
+           
+        </form>
+    </div>
+
+
     <style>
         * {
             margin: 0;
@@ -188,79 +237,6 @@
             }
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <form>
-            <h1>Cadastro do Responsável do Veículo</h1>
-           
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <div class="input-icon">
-                    <i class="fas fa-user"></i>
-                    <input type="text" name="nome" id="nome" placeholder="Digite o Nome">
-                </div>
-            </div>
-           
-            <div class="form-group">
-                <label for="telefone">Telefone:</label>
-                <div class="input-icon">
-                    <i class="fas fa-phone"></i>
-                    <input type="tel" name="telefone" id="telefone" placeholder="Digite o Telefone">
-                </div>
-            </div>
-           
-            <div class="form-group">
-                <label for="endereco">Endereço:</label>
-                <div class="input-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <input type="text" name="endereco" id="endereco" placeholder="Digite o Endereço">
-                </div>
-            </div>
-           
-            <div class="form-group">
-                <label for="cep">CEP:</label>
-                <div class="input-icon">
-                    <i class="fas fa-map-pin"></i>
-                    <input type="text" name="cep" id="cep" placeholder="Digite o CEP">
-                </div>
-            </div>
 
-            <button type="submit" class="button" id="botao">
-                <i class="fas fa-user-plus"></i> Cadastrar
-            </button>
-           
-           
-        </form>
-    </div>
-
-    <script>
-        // Adicionando máscaras de formatação
-        document.addEventListener('DOMContentLoaded', function() {
-            const telefoneInput = document.getElementById('telefone');
-            const cepInput = document.getElementById('cep');
-           
-            // Máscara para telefone (XX) XXXXX-XXXX
-            telefoneInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length > 0) {
-                    value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
-                    if (value.length > 10) {
-                        value = value.replace(/(\d{5})(\d)/, '$1-$2');
-                    }
-                }
-                e.target.value = value;
-            });
-           
-            // Máscara para CEP XXXXX-XXX
-            cepInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length > 5) {
-                    value = value.replace(/^(\d{5})(\d)/, '$1-$2');
-                }
-                e.target.value = value;
-            });
-        });
-    </script>
 </body>
 </html>
