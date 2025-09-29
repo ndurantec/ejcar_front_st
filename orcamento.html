@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Orçamento</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/orçamento.js"></script>
+    
     <style>
         * {
             margin: 0;
@@ -255,7 +257,7 @@
                         <label for="product-name" class="form-label">Produto:</label>
                         <div class="input-icon">
                             <i class="fas fa-box"></i>
-                            <input type="text" class="form-control" id="product-name" placeholder="Nome do produto ou serviço">
+                            <input type="text" class="form-control" id="produto" placeholder="Nome do produto ou serviço">
                         </div>
                     </div>
                    
@@ -268,11 +270,11 @@
                     <label for="product-price" class="form-label">Mão de obra:</label>
                     <div class="input-icon">
                         <i class="fas fa-dollar-sign"></i>
-                        <input type="number" class="form-control" id="product-price" placeholder="0,00" min="0" step="0.01">
+                        <input type="number" class="form-control" id="mao_de_obra" placeholder="0,00" min="0" step="0.01">
                     </div>
                 </div>
                
-                <button type="submit" class="btn btn-submit">
+                <button type="button" class="btn btn-submit" onclick="finalizar()">
                     <i class="fas fa-check-circle"></i> Finalizar Orçamento
                 </button>
             </form>

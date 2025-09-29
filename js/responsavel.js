@@ -1,3 +1,6 @@
+// João e Fabricio
+
+
 
 // cadastrar
 function cadastrar() {
@@ -9,43 +12,23 @@ function cadastrar() {
 
     const cep= document.getElementById("cep").value;
 
-        alert(nome + " - " + telefone + " - " + endereco + " - " + cep);
 
-}
+            if(nome == ""){
+             alert("Você precisa preencher o campo nome");
+            }
 
-// validarNome
-function validarNome() {
-    const nome = document.getElementById("name").value;
+            if(telefone == ""){
+                alert("Você precisa preencher o campo telefone");
+            }
 
-    if(nome == ""){
-        alert("Você precisa preencher o campo nome");
-    }
-}
+             if(endereco == ""){
+                alert("Você precisa preencher o campo endereco");
+            }
 
-//validarTelefone
-function validarTelefone(){
-    const telefone = document.getElementById("telefone").value;
-
-    if(telefone == ""){
-            alert("Você precisa preencher o campo telefone");
-    }
-}
-
-
-//validarEndereco
-function validarEndereco(){
-    const endereco = document.getElementById("endereco").value;
-       
-    if(endereco == ""){
-            alert("Você precisa preencher o campo endereco");
-    }
-}
-
-//validarCep
-function validarCep(){
-    const cep = document.getElementById("cep").value;
-            
-    if(cep == ""){
+             if(cep == ""){
             alert("Você precisa preencher o campo CEP");
-    }
+                }
+
+                  alert(nome + " - " + telefone + " - " + endereco + " - " + cep);
 }
+
