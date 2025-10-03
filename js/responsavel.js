@@ -14,7 +14,7 @@ function cadastrar() {
 
 
             if(nome == ""){
-             alert("Você precisa preencher o campo nome");
+                alert("Você precisa preencher o campo nome");
             }
 
             if(telefone == ""){
@@ -26,8 +26,8 @@ function cadastrar() {
             }
 
              if(cep == ""){
-            alert("Você precisa preencher o campo CEP");
-                }
+                alert("Você precisa preencher o campo CEP");
+            }
 
                   alert(nome + " - " + telefone + " - " + endereco + " - " + cep);
 }
